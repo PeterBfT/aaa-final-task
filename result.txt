@@ -1,0 +1,39 @@
+$ py pizza.py
+Usage: pizza.py [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  menu   Выводит меню
+  order  Готовит и доставляет пиццу
+$ py pizza.py menu  
+- Margherita 🧀: tomato sauce, mozzarella, tomatoes
+- Pepperoni 🍕: tomato sauce, mozzarella, pepperoni
+- Hawaiian 🍍: tomato sauce, mozzarella, chicken, pineapples
+$ py pizza.py order pepperoni --delivery --size=xl
+😎 Большая пицца
+👨‍🍳 Приготовили за 13с!
+🛵 Доставили за 23с!
+$ py pizza.py order Margherita                    
+👨‍🍳 Приготовили за 32с!
+🏠 Забрали за 3с!
+$ py -m pytest -v test_pizza.py
+======================================================================= test session starts =======================================================================
+platform win32 -- Python 3.12.0, pytest-7.4.3, pluggy-1.3.0 -- C:\Users\Computer IBM\AppData\Local\Programs\Python\Python312\python.exe
+cachedir: .pytest_cache
+rootdir: .\aaa-final-task
+plugins: cov-4.1.0
+collected 7 items
+
+test_pizza.py::TestPizza::test_dict PASSED                                                                                                                   [ 14%] 
+test_pizza.py::TestPizza::test_big_pizza PASSED                                                                                                              [ 28%] 
+test_pizza.py::TestPizza::test_order_no_delivery_no_size PASSED                                                                                              [ 42%] 
+test_pizza.py::TestPizza::test_order_delivery PASSED                                                                                                         [ 57%] 
+test_pizza.py::TestPizza::test_order_size PASSED                                                                                                             [ 71%] 
+test_pizza.py::TestPizza::test_order_wrong_pizza PASSED                                                                                                      [ 85%] 
+test_pizza.py::TestPizza::test_menu PASSED                                                                                                                   [100%] 
+
+======================================================================== 7 passed in 0.09s ======================================================================== 
+
+
